@@ -210,7 +210,8 @@ Now, you will update the web site to display a mobile-specific page if the site 
     This line of code should look like this now.
 
     ```
-    var targetUrl = "https://cordovahostedweb-redirect.azurewebsites.net/cordova/setPlatformCookie?platform=" + cordova.platformId;
+    var targetUrl = "https://cordovahostedweb-redirect.azurewebsites.net/cordova/setPlatformCookie?platform="
+     + cordova.platformId;
     ```
 
     Now, when the Cordova app redirects to the web site, we call a function (setPlatformCookie) to tell the web site that a Cordova app is running. We also pass in the Cordova platform ID. We will need this for redirection.
