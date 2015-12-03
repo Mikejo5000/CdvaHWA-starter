@@ -144,7 +144,8 @@ The starter solution includes an ASP.NET MVC site that we will use for the hoste
 
     ```
     Verifying connectivity..
-    <a id="bkpLink" href="https://cordovahostedweb-starter.azurewebsites.net">cordovahostedweb.azurewebsites.net</a>
+    <a id="bkpLink" href="https://cordovahostedweb-starter.azurewebsites.net">
+        cordovahostedweb.azurewebsites.net</a>
 
     <div class="app">
         <h1>Apache Cordova</h1>
@@ -162,7 +163,9 @@ The starter solution includes an ASP.NET MVC site that we will use for the hoste
 4. In index.html, replace the Content-Security-Policy (CSP) <meta> element with the following <meta> element.
 
     ```
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://cordovahostedweb-starter.azurewebsites.net https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap:
+    https://cordovahostedweb-starter.azurewebsites.net https://ssl.gstatic.com
+     'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
     ```
 
     By adding the web site URL to the above CSP (https://cordovahostedweb-starter.azurewebsites.net in this example), you specify that it is a trusted domain, and content from this site will be allowed in your hosted app.
@@ -172,7 +175,8 @@ The starter solution includes an ASP.NET MVC site that we will use for the hoste
     ```
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1,
+      maximum-scale=1, minimum-scale=1, width=device-width">
     ```
 
 7. Now, choose to deploy to **Android**, and pick an emulator like the **VS Emulator 5" KitKat(4.4) XXHDPI Phone**.
@@ -244,7 +248,8 @@ Now, you will update the web site to display a mobile-specific page if the site 
             {
                 if (!string.IsNullOrWhiteSpace(platform))
                 {
-                    HttpContext.Response.SetCookie(new HttpCookie(platformCookieKey, platform));
+                    HttpContext.Response.SetCookie(new HttpCookie(
+                      platformCookieKey, platform));
                 }
                 return RedirectToAction("index");
             }
@@ -267,7 +272,9 @@ Now, you will update the web site to display a mobile-specific page if the site 
     <h2>index</h2>
 
     @section Metas{
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://cordovahostedweb-redirect.azurewebsites.net/ https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap:
+        https://cordovahostedweb-redirect.azurewebsites.net/ https://ssl.gstatic.com
+        'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
     }
 
     @if (platform == "android" || platform == "ios" || platform == "windows")
@@ -313,7 +320,8 @@ To save time and steps, instead of republishing the ASP.NET project to a new Azu
 2. In index.js, verify that you are using the correct value for the targetUrl. It should look like this:
 
     ```
-    var targetUrl = "https://cordovahostedweb-redirect.azurewebsites.net/cordova/setPlatformCookie?platform=" + cordova.platformId;
+    var targetUrl = "https://cordovahostedweb-redirect.azurewebsites.net/cordova/setPlatformCookie?platform="
+     + cordova.platformId;
     ```
 
 4. Press F5.
