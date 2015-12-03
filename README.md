@@ -154,7 +154,7 @@ The starter solution includes an ASP.NET MVC site that we will use for the hoste
         </div>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
     ```
 
     The most important thing here is that you create the anchor link that is used in the redirect script we created in the previous step.
