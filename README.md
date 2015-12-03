@@ -303,7 +303,7 @@ Now, you will update the web site to display a mobile-specific page if the site 
 
     Finally, this page also loads the app.js script. We will use this file later to add the Camera plugin code. (You don't need to worry about that yet.)
 
-## Fix up styling in the intitial page
+## Fix up styling in the initial page
 
 * In index.css in the Cordova project, replace the CSS code with this:
 
