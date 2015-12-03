@@ -185,6 +185,8 @@
     <Content Include="cordovaApp\app.js.map" />
     <Content Include="cordovaApp\tsconfig.json" />
     <Content Include="cordovaApp\tsd.json" />
+    <None Include="Properties\PublishProfiles\cordovahostedweb-starter %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\cordovahostedweb-starter %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\cordovahostedweb-starter.pubxml" />
     <None Include="Properties\PublishProfiles\cordovahostedweb.pubxml" />
     <None Include="Properties\PublishProfiles\hosted-web-app-partial-mj.pubxml" />

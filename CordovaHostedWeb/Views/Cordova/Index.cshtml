@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "index";
     var platform = ViewBag.Platform;
 }
@@ -7,23 +6,22 @@
 <h2>index</h2>
 
 @section Metas{
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: http://cordovahostedweb-starter.azurewebsites.net/ https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://cordovahostedweb-starter.azurewebsites.net/ https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
 }
 
 @if (platform == "android" || platform == "ios" || platform == "windows")
 {
     @Scripts.Render("~/cordovadist/" + platform + "/cordova.js");
 
-    <p><a class="btn btn-primary btn-lg">Take Picture &raquo;</a></p>
+    <p><a class="btn btn-primary btn-lg">Take picture &raquo;</a></p>
     <img class="media-object pull-left" />
 
     @Scripts.Render("~/cordovaApp/app.js");
 }
 else
 {
-    <p>Not valid platform found</p>
+    <p>No valid platform found</p>
 }
-
 
 <div>
     Found cookie platform to be: <strong>@platform</strong>

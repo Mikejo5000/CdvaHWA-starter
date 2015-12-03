@@ -13,7 +13,7 @@ namespace CordovaHostedWeb.Controllers
         {
             var cookie = HttpContext.Request.Cookies[platformCookieKey];
             var platform = "dontknow";
-            if (cookie!=null)
+            if (cookie != null)
             {
                 platform = cookie.Value;
             }
@@ -24,7 +24,8 @@ namespace CordovaHostedWeb.Controllers
         {
             if (!string.IsNullOrWhiteSpace(platform))
             {
-                HttpContext.Response.SetCookie(new HttpCookie(platformCookieKey, platform));
+                HttpContext.Response.SetCookie(new
+                HttpCookie(platformCookieKey, platform));
             }
             return RedirectToAction("index");
         }

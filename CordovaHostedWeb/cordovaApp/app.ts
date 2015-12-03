@@ -11,7 +11,8 @@ module CordovaHostedApp {
         function onDeviceReady() {
             // Handle the Cordova pause and resume events
             document.addEventListener('pause', onPause, false);
-            document.addEventListener('resume', onResume, false);      
+            document.addEventListener('resume', onResume, false);
+
         }
 
         function onPause() {
